@@ -10,8 +10,11 @@
       }
     ],
     "_variables": {
-      "Boolean": {
-        "__id__": 12
+      "Trigger": {
+        "__id__": 16
+      },
+      "Blend": {
+        "__id__": 17
       }
     }
   },
@@ -38,11 +41,17 @@
       },
       {
         "__id__": 6
+      },
+      {
+        "__id__": 8
       }
     ],
     "_transitions": [
       {
-        "__id__": 8
+        "__id__": 11
+      },
+      {
+        "__id__": 15
       }
     ],
     "_entryState": {
@@ -70,8 +79,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 3.5,
-      "centerY": -18.5,
+      "centerX": -19.5,
+      "centerY": -15.5,
       "id": "16658018788550.5531648252077477"
     },
     "name": "Clip Motion",
@@ -94,6 +103,42 @@
     "clip": null
   },
   {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": 41.5,
+      "centerY": -36,
+      "id": "16658369978880.19603770648482488"
+    },
+    "name": "Blend 1D",
+    "_components": [],
+    "motion": {
+      "__id__": 9
+    },
+    "speed": 1,
+    "speedMultiplier": "",
+    "speedMultiplierEnabled": false
+  },
+  {
+    "__type__": "cc.animation.AnimationBlend1D",
+    "__editorExtras__": {
+      "id": "16658369978860.13750907696620662",
+      "centerX": 0,
+      "centerY": 0,
+      "name": "",
+      "autoThreshold": true
+    },
+    "name": "Blend 1D",
+    "_items": [],
+    "param": {
+      "__id__": 10
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "Blend",
+    "value": 0
+  },
+  {
     "__type__": "cc.animation.Transition",
     "from": {
       "__id__": 3
@@ -103,7 +148,7 @@
     },
     "conditions": [
       {
-        "__id__": 9
+        "__id__": 12
       }
     ]
   },
@@ -111,10 +156,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 10
+      "__id__": 13
     },
     "rhs": {
-      "__id__": 11
+      "__id__": 14
     }
   },
   {
@@ -128,8 +173,29 @@
     "value": 0
   },
   {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 5
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": [],
+    "duration": 0.3,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "destinationStart": 0,
+    "relativeDestinationStart": false,
+    "interruptionSource": 0,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.TriggerVariable",
+    "_flags": 1
+  },
+  {
     "__type__": "cc.animation.PlainVariable",
-    "_type": 1,
-    "_value": true
+    "_type": 0,
+    "_value": 0
   }
 ]
